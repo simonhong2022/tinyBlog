@@ -1,37 +1,8 @@
-import { IBlog, fetchBlogs } from "@/apicalls/blog";
-import { useEffect, useState } from "react";
-import { Button, Modal, Input, Form, Label, Message, Header, Card } from 'semantic-ui-react'
+import { IBlog } from "@/apicalls/blog";
+import { Header, Card, Icon } from 'semantic-ui-react'
 import BlogCard from "./BlogCard";
+import { sections } from "@/type/type";
 
-export const sections = [
-
-    {
-        key: 'american',
-        text: 'american',
-        value: 'american',
-    },
-    {
-        key: 'french',
-        text: 'french',
-        value: 'french',
-    },
-    {
-        key: 'history',
-        text: 'history',
-        value: 'history',
-    },
-    {
-        key: 'crime',
-        text: 'crime',
-        value: 'crime',
-    },
-    {
-        key: 'love',
-        text: 'love',
-        value: 'love',
-    }
-
-]
 
 type BlogContentProps = {
     blogs: IBlog[],
@@ -44,7 +15,7 @@ export default function BlogContent(props: BlogContentProps) {
 
     return (
 
-        <div className="blog-card-box">
+        <div className="blog-card-container">
             {sections.filter((section) => {
                 if (filterValue === 'all') {
                     return true;
@@ -52,16 +23,21 @@ export default function BlogContent(props: BlogContentProps) {
                 return section.text === filterValue
             }).map(section => {
                 return (
-                    <Card.Group key={section.key}>
-                        <Header size="medium"><strong><ins>{section.text}</ins></strong></Header>
-                        {blogs.filter(blog => blog.tags.find(tag => tag === section.text)).map((blog) => {
-                            return (
+                    <main key={section.key} className="blog-main">
+                        <Header className="blog-section-header" size="medium" color="green" block>
+                            <Icon name="tags" />
+                            <Header.Content>{section.text}</Header.Content>
+                        </Header>
+                        <Card.Group className="blog.card.group" >
+                            {blogs.filter(blog => blog.tags.find(tag => tag === section.text)).map((blog) => {
+                                return (
 
-                                <BlogCard key={blog.id} blog={blog} />
+                                    <BlogCard key={blog.id} blog={blog} section={section.text}/>
 
-                            )
-                        })}
-                    </Card.Group>
+                                )
+                            })}
+                        </Card.Group>
+                    </main>
 
                 )
             })}

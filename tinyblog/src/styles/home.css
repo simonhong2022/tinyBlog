@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+.home-main {
+    font-family: 'Pangolin', cursive;
+    min-height: 100%;
+    height: fit-content;
+    margin-top: 5%;
+}
+
+.home-filter {
+    display:flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    margin: 5% 10% -5% 10%;
+}
+
+.home-contents-container {
+    
+   display: flex;
+}
+

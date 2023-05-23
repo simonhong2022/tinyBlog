@@ -5,39 +5,6 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react';
 import { Header, Icon } from 'semantic-ui-react'
 
-export const dropdownSections = [
-  {
-      key: 'all',
-      text: 'all',
-      value: 'all',
-  },
-  {
-      key: 'american',
-      text: 'american',
-      value: 'american',
-  },
-  {
-      key: 'french',
-      text: 'french',
-      value: 'french',
-  },
-  {
-      key: 'history',
-      text: 'history',
-      value: 'history',
-  },
-  {
-      key: 'crime',
-      text: 'crime',
-      value: 'crime',
-  },
-  {
-      key: 'love',
-      text: 'love',
-      value: 'love',
-  }
-
-]
 
 export default function Home() {
   const [filterValue, setFilterValue] = useState('all');
@@ -66,10 +33,10 @@ export default function Home() {
           <Icon name='blogger' />
           <Header.Content>Welcome to Tiny Blog</Header.Content>
         </Header>
-        <div>
+        <div className="home-filter">
           <SectionFilter filterChanged={filterChanged} />
         </div>
-        <div className="home-body-container">
+        <div className="home-contents-container">
           <BlogContent blogs={blogs} filterValue={filterValue} />
         </div>
       </main>

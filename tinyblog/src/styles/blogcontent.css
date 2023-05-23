@@ -1,0 +1,17 @@
+.ui.medium.header.blog-section-header {
+    font-size: x-large;
+    width:90%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.ui.cards {
+    justify-content:space-evenly;
+}
+
+.blog-main {
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 5%;
+  
+}

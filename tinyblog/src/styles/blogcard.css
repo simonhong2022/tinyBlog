@@ -1,0 +1,10 @@
+.ui.active.modal {
+    width: 60%;
+}
+
+.ui.modal>.content>.description {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    line-height: 200%;
+}

@@ -3,13 +3,12 @@ import { Card, Icon, Modal, Button } from 'semantic-ui-react'
 import { IBlog } from "@/apicalls/blog";
 
 type BlogCardProps = {
-
     blog: IBlog;
     section: string;
-
 }
 
 export default function BlogCard(props: BlogCardProps) {
+
     const [open, setOpen] = useState(false);
     const { blog, section } = props;
 
@@ -33,9 +32,9 @@ export default function BlogCard(props: BlogCardProps) {
 
                                 if (tag === section) {
                                     return (
-                                        <a key={tag}>
+                                        <a key={tag} >
                                             <Icon color='blue' name='hashtag' />
-                                            <strong><ins>{tag}</ins></strong>
+                                            <strong style={{color:"blue"}}><ins>{tag}</ins></strong>
                                         </a>
                                     )
                                 }

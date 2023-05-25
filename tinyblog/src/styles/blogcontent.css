@@ -1,16 +1,22 @@
 .ui.medium.header.blog-section-header {
     font-size: x-large;
-    width:90%;
+    width: 90%;
     margin-left: 5%;
     margin-top: 3%;
+    margin-bottom: 1%;
 }
 
 .ui.cards {
-    justify-content:space-evenly;
+    justify-content: space-evenly;
+}
+
+.Collapsible__contentInner {
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .blog-main {
     width: 90%;
     margin-top: 10%;
-    margin-left: 5%;  
+    margin-left: 5%;
 }

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-
+import mockblog from "../mockblog.json"
 export interface IBlog {
     id: number,
     title: string,
@@ -11,6 +11,7 @@ export interface IBlog {
 
 const BASE_PATH = process.env.NEXT_PUBLIC_PORT;
 
+/*
 export async function fetchBlogs(setBlogs: Dispatch<SetStateAction<IBlog[]>>) {
 
     const response = await fetch(BASE_PATH!);
@@ -18,4 +19,11 @@ export async function fetchBlogs(setBlogs: Dispatch<SetStateAction<IBlog[]>>) {
     setBlogs(responseData.posts);
 
 }
+*/
 
+
+export function fetchBlogs(setBlogs: Dispatch<SetStateAction<IBlog[]>>) {
+
+   setBlogs(mockblog.posts);
+
+}

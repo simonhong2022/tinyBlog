@@ -20,5 +20,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### UI
 
+For web version:
+
+<div align=center>
+ <img src="tinyblog/src/assets/web.png"/>
+</div>
+
 ### Tools
 This web application is based on NEXT.JS using TypeScript + Sementic UI.

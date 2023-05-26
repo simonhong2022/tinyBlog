@@ -1,14 +1,24 @@
 # tinyBlog
 
 ### Purpose
-You are going to create a blog that connects to this https://dummyjson.com/posts (remember to work with mock data locally here also. Please don’t hammer this API too much while developing). Your blog only shows different posts. But the important thing is that you need to have sections for the different posts. 
+This project is intended to improve and display my typescript/NEXT.JS coding skill for frontend. It connects to external ready-made API and only shows different posts depending on sections.
+It displays 5 different sections based on 'tags' value which you get from the API. There is a dropdown filter for all sections and for each section as well.  
+You can checkout deployment of this project here. https://tiny-blog-neon.vercel.app/
 
+### How to use
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-### Requirements 
-<ul>
-  <li> Display the posts as a list of cards. With a clear paragraph body and title for each card. The tags should be displayed at the bottom of the card. </li>
-  <li> It should display 5 different sections. These are based on the “tags” value you get from the API. You decide yourself which 5 tags you wanna show </li>
-  <li> The sections should be clearly separated from each other, and it should be clear which one is which </li>
-  <li> You should have a dropdown for each section. So you can show and hide the posts for each section </li>
-  <li> Everything should be in React with TypeScript! </li>
-</ul>
+```bash
+npm install
+npm install semantic-ui-react semantic-ui-css
+
+# then
+npm run dev
+
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### UI
+
+### Tools
+This web application is based on NEXT.JS using TypeScript + Sementic UI.
